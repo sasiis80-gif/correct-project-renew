@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>This is what lily says after going shopping...</p>
+<p id="details"></p>
+<script>
+    class Toy {
+        constructor(brand) {
+            this.toyname = brand;
+        }
+        present() {
+            return 'I have a ' + this.toyname;
+        }
+    }
+    class Model extends Toy {
+        constructor(brand, mod) {
+            super(brand);
+            this.model = mod;
+        }
+        show() {
+            return this.present() + ' It is a ' + this.model;
+        }
+    }
+
+    let myToy = new Model(" new plush toy and a Makeup pallete... ", " a teddy bear and also a James Charles pallete.");
+    document.getElementById("details").innerHTML = myToy.show();
+</script>
+</body>
+</html>
